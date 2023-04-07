@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: corretto11
   build:
     commands:
       - echo Build started on `date`
@@ -11,11 +11,9 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn package   
+      - mvn package
 artifacts:
   files:
-    - target/track-demo-spring.jar  
+    - target/track-demo-spring.jar
     - buildspec.yml
-    - scripts/*
-    - appspec.yml
-  discard-paths: yes
+discard-paths: yes
