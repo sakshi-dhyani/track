@@ -7,14 +7,15 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - Maven install
+      - mvn install
   post_build:
     commands:
-      - echo Build completed on `date`     
+      - echo Build completed on `date`
+      - mvn package   
 artifacts:
   files:
     - target/track-demo-spring.jar  
     - buildspec.yml
-    - scripts/*.sh
+    - scripts/*
     - appspec.yml
   discard-paths: yes
