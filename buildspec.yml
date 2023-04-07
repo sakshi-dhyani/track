@@ -14,7 +14,7 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/track-demo-spring.jar
+    - target/track-demo-spring.jar  
     - buildspec.yml
     - scripts/*.sh
     - appspec.yml
